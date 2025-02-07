@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Te amo Charito</title>
+    <title>Campo de Margaritas para Sarita</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <style>
         body {
             margin: 0;
-            height: 100vh;
-            overflow: hidden;
+            
+            overflow: auto;
             background: linear-gradient(135deg, #ffe6f0 0%, #fff0f5 50%, #f0f8ff 100%);
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
             font-family: 'Arial', sans-serif;
+            height: auto; /* Permite que crezca según el contenido */
+    max-height: 80vh; /* Evita que se salga de la pantalla */
+    overflow-y: auto; /* Si es muy largo, permite desplazamiento */
         }
 
         .mensaje {
@@ -73,8 +76,8 @@
         }
 
         .message-container {
-            min-height: 60px;
-            margin-top: 20px;
+            min-height: 20px;
+            margin-top: 10px;
         }
 
         #message {
@@ -170,25 +173,74 @@
             max-width: 80%;
             margin: 15px auto;
         }
+
+        #testamento {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border: 1px solid #d63384;
+    background-color: white;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 500px;
+    z-index: 1000; /* Para que esté encima de todo */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+
+
+    height: auto; /* Permite que crezca según el contenido */
+    max-height: 80vh; /* Evita que se salga de la pantalla */
+    overflow-y: auto; /* Si es muy largo, permite desplazamiento */
+}
+
+
+
     </style>
 </head>
 <body>
     <div class="mensaje">
-        <div class="titulo">Te Amo Sarita ❤️</div>
-        <div class="subtitulo">Eres mi vida entera</div>
-        <div class="heart">❤️</div>
-        <p class="valentine-message">Eres mi persona favorita.<br>Gracias por aceptar ser mi San Valentin ❤️</p>
-        <button class="btn-love" onclick="showLoveMessage()">Haz clic para una sorpresa</button>
         <div class="message-container">
             <p id="message"></p>
         </div>
+        <div class="titulo">Te Amo Mi Melocotón 🍑❤️</div>
+        <div class="subtitulo">Eres mi vida entera</div>
+        <div class="heart">🍑❤️</div>
+        <p class="valentine-message">Eres la persona más especial para mí.</p>
+        <button class="btn-love" onclick="showLoveMessage()">Melocotón 🍑</button>
+    
+        <button class="btn-love" onclick="mostrarTestamento()">Dale click 💌</button>
+      
+        <div id="testamento">
+            <p>Si estas palabras llegan a ti, quiero que las leas con el corazón, porque cada una está escrita con el amor inmenso que siento por ti.
+
+                La vida nos ha puesto pruebas, momentos de alegría y también de dolor. Hemos discutido, nos hemos distanciado a veces, pero siempre encontramos el camino de regreso. Y eso, amor mío, es porque lo nuestro es real. Porque lo nuestro vale la pena.
+                
+                Hoy me entregaste un pedacito más de tu corazón al aceptar ser mi San Valentín, y no sabes lo feliz que eso me hace. Pero también sé que pronto el destino me llevará lejos, a otro lugar, a otra etapa… España me espera, pero mi corazón se queda contigo.
+                
+                No importa la distancia, no importa el tiempo. Mi amor por ti no es un susurro que se apaga con la brisa, es un grito que desafía el viento, una llama que ni la más fuerte de las tormentas podrá apagar. Porque eres y seguirás siendo la persona más especial en mi vida.
+                
+                Si pudiera dejarte algo para siempre, sería la certeza de que siempre te llevaré conmigo. En cada amanecer, en cada noche estrellada, en cada latido de mi corazón, estarás tú. Porque eres mi hogar, mi paz, mi amor eterno.
+                
+                Y aunque la vida nos separe en kilómetros, mi promesa es firme: mi amor por ti no conoce distancias, porque donde estés tú, ahí estará mi alma.
+                
+                Te amo, ahora y por siempre. ❤️</p>
+        </div>
+       
+   
     </div>
+
+
+
+
+
     <div class="campo-flores"></div>
 
     <script>
         const messages = [
             "Cada día me enamoro más de ti 💕",
-            "Eres el amor de mi vida 💖",
+            "Eres mi Melocotón 🍑💖",
             "Contigo todo es más bonito 🌟",
             "Mi corazón late por ti 💗",
             "Eres mi mejor historia de amor 💘",
@@ -202,18 +254,23 @@
         let currentMessageIndex = 0;
 
         function showLoveMessage() {
+
             const messageElement = document.getElementById("message");
-            messageElement.style.opacity = "0";
+
+            messageElement.textContent = messages[currentMessageIndex];
+            messageElement.classList.add("visible");
+            messageElement.style.opacity = "1";
             messageElement.style.transform = "translateY(20px)";
-            
             setTimeout(() => {
                 messageElement.textContent = messages[currentMessageIndex];
                 messageElement.classList.add("visible");
                 currentMessageIndex = (currentMessageIndex + 1) % messages.length;
-                
                 createFloatingHearts();
             }, 300);
+            mensagee();
         }
+
+
 
         function createFloatingHearts() {
             for(let i = 0; i < 5; i++) {
@@ -365,6 +422,15 @@
             campo.innerHTML = '';
             crearCampoFlores();
         });
+
+
+        function mostrarTestamento() {
+            document.getElementById("testamento").style.display = "block";
+        }
+
+
+        window.onload = crearCampoFlores;
+
     </script>
 </body>
 </html>

@@ -33,6 +33,13 @@ body {
 .container .btn {
     display: flex;
     gap: 25px;
+
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn a {
@@ -43,4 +50,32 @@ body {
     border-radius: 8px;
     box-shadow: 0.5rem 1rem 3rem hsl(0, 0, 0,0.3);
 
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+
+.yes-btn {
+    background: #ff6b6b;
+    color: white;
+}
+
+.yes-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.no-btn {
+    background: #f1f2f6;
+    color: #2f3542;
+    position: relative;
+}
+
+.no-btn:hover {
+    animation: shake 0.5s ease-in-out;
 }

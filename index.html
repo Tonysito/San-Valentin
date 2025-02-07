@@ -4,17 +4,212 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Te gustaria salir conmigo?</title>
+    <title>San Valentin</title>
+    <style>
+        .carousel-container {
+            width: 300px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .carousel {
+            display: flex;
+            width: 1800px;
+            animation: slide 9s infinite;
+        }
+        .carousel img {
+            width: 300px;
+            height: 400px;
+            border-radius: 15px;
+        }
+        @keyframes slide {
+            0%, 33% { transform: translateX(0); }
+            34%, 66% { transform: translateX(-600px); }
+            67%, 100% { transform: translateX(-1200px); }
+        }
+
+     
+
+        .ramo {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 15px;
+            transform: translateX(-30px); /* Movido un poco a la izquierda */
+        }
+
+        .flor {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            animation: balanceo 3s infinite ease-in-out alternate;
+        }
+
+        /* Centro de la margarita */
+        .centro {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            background: #FFD700;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+            z-index: 2;
+        }
+
+        /* Pétalos */
+        .petalo {
+            position: absolute;
+            width: 30px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Animación para que los pétalos se expandan al pasar el mouse */
+        .flor:hover .petalo {
+            transform: scale(1.1);
+        }
+
+        /* Posicionamos los pétalos en círculo */
+        .petalo:nth-child(1) { transform: rotate(0deg) translateY(-35px); }
+        .petalo:nth-child(2) { transform: rotate(45deg) translateY(-35px); }
+        .petalo:nth-child(3) { transform: rotate(90deg) translateY(-35px); }
+        .petalo:nth-child(4) { transform: rotate(135deg) translateY(-35px); }
+        .petalo:nth-child(5) { transform: rotate(180deg) translateY(-35px); }
+        .petalo:nth-child(6) { transform: rotate(225deg) translateY(-35px); }
+        .petalo:nth-child(7) { transform: rotate(270deg) translateY(-35px); }
+        .petalo:nth-child(8) { transform: rotate(315deg) translateY(-35px); }
+
+        /* Tallos verdes */
+        .tallo {
+            position: absolute;
+            width: 6px;
+            height: 120px;
+            background: #3E8E41;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+
+        /* Hojas */
+        .hoja {
+            position: absolute;
+            width: 25px;
+            height: 50px;
+            background: #4CAF50;
+            border-radius: 50%;
+            top: 50%;
+            box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+        }
+
+        .hoja.left { left: -18px; transform: rotate(-30deg); }
+        .hoja.right { right: -18px; transform: rotate(30deg); }
+
+        /* Animación de balanceo del ramo */
+        @keyframes balanceo {
+            0% { transform: rotate(-2deg); }
+            100% { transform: rotate(2deg); }
+        }
+    </style>
+    
 </head>
 <body>
     <div class="container">
         <div class="tenor-gif-embed" data-postid="2871482820979272488" data-share-method="host" data-aspect-ratio="1.28351" data-width="100%"><a href="https://tenor.com/view/mochi-pet-mochi-cat-cute-squiddy-gif-2871482820979272488">Mochi Pet GIF</a>from <a href="https://tenor.com/search/mochi-gifs">Mochi GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-        <h1>¿Te gustaria salir conmigo? 🥰</h1>
-        <p>Eres la persona mas especial del mundo</p>
+        <h1>Sarita, Te gustaria ser mi Melocotón este 14 de Febrero? 🥰</h1>
+    
+        <div class="ramo">
+            <div class="flor">
+                <div class="tallo"></div>
+                <div class="hoja left"></div>
+                <div class="hoja right"></div>
+                <div class="centro"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+            </div>
+    
+            <div class="flor">
+                <div class="tallo"></div>
+                <div class="hoja left"></div>
+                <div class="hoja right"></div>
+                <div class="centro"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+            </div>
+    
+            <div class="flor">
+                <div class="tallo"></div>
+                <div class="hoja left"></div>
+                <div class="hoja right"></div>
+                <div class="centro"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+                <div class="petalo"></div>
+            </div>
+        </div>
         <div class="btn">
-            <a href="si.html">SI</a>
-            <a href="no1.html">NO</a>
+            <a class="btn yes-btn" href="si.html">¡Sí! 💖</a>
+            <a class="btn no-btn" href="no1.html">No 😢</a>
+            </div>
+    </div>
+
+
+  
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="../san-valentin-proyecto/images/miamor.jpg" alt="">
+            <img src="../san-valentin-proyecto/images/miamor2.jpg" alt="">
+            <img src="../san-valentin-proyecto/images/miamor3.jpg" alt="">
+            <img src="../san-valentin-proyecto/images/miamor4.jpg" alt="">
+            <img src="../san-valentin-proyecto/images/mivida.jpg" alt="">
+            <img src="../san-valentin-proyecto//images/mibebe.jpg" alt="">
         </div>
     </div>
+
+
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const carousel = document.querySelector(".carousel");
+            let index = 0;
+            
+            setInterval(() => {
+                index = (index + 1) % 6;
+                carousel.style.transform = `translateX(-${index * 600}px)`;
+            }, 3000);
+        });
+    </script>
+
 </body>
 </html>

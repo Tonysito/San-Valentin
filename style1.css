@@ -1,15 +1,4 @@
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San Valentín</title>
-  
-
-    <style>
-        * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .container {
@@ -176,36 +165,3 @@ body {
         height: 333px;
     }
 }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="content">
-            <div class="hearts-bg"></div>
-            
-            <div class="proposal-card">
-                <div class="gif-container">
-                    <img src="./images/miamor2.jpg" alt="Cute Cat" class="mochi-gif">
-                </div>
-
-                <h1 class="title">Si no es a las buenas, es a las malas 😈 </h1>
-                <p class="subtitle">Te amo miamor, nada fue forzado :3 ❤️</p>
-
-                <div class="carousel-container">
-                    <div class="carousel">
-                   
-                        <img src=".//images/miamor3.jpg" alt="Romantic 1">
-                        
-                      </div>
-                </div>
-
-                <div class="buttons">
-                    <button class="btn yes-btn" onclick="handleYesClick()">¡Sí! 💖</button>
-                    <button class="btn no-btn" onmouseover="moveNoButton()" onclick="handleNoClick()">No 😢</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
