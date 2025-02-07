@@ -79,3 +79,31 @@ body {
 .no-btn:hover {
     animation: shake 0.5s ease-in-out;
 }
+
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    .carousel-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel {
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .ramo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flor {
+        width: 60px;
+        height: 60px;
+    }
+
+}
